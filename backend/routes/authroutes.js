@@ -1,12 +1,7 @@
 import express from 'express';
+import{join,access,exit} from '../controllers/auth.controller.js';
 const router = express.Router();
-router.get('/join',(req,res)=>{
-    res.send("Join page");
-})
-router.get('/access',(req,res)=>{
-    res.send("Auth yourself");
-});
-router.get('/exit',(req,res)=>{
-    res.send("exit page");
-});
+router.get('/join',join);
+router.get('/access',access);
+router.get('/exit',exit);
 export default router;
